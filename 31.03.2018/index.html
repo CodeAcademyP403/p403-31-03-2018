@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="main" style="color: red;" class="main">
+        <div style="left: 0;" class="inner">
+            <p>
+                Lorem ipsum dolor sit amet. 1
+            </p>
+        </div>
+        <div style="left: 0;" class="inner">
+            <p>
+                Lorem ipsum dolor sit amet. 2
+            </p>
+        </div>
+        <div  style="left: 0;"class="inner">
+            <p>
+                Lorem ipsum dolor sit amet. 3
+            </p>
+        </div>
+        <div style="left: 0;" class="inner">
+            <p>
+                Lorem ipsum dolor sit amet. 4
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+        // var cars = ["Saab", "Volvo", "BMW", "Audi", "VAZ 2106", "Mercedes", "Nissan"];
+
+        // for(var index = 0; index <= cars.length; index++){
+        //     console.log(cars[index]);
+        // }
+
+        // var cars = ["Saab", "Volvo", "BMW", "Audi", "VAZ 2106", "Mercedes", "Nissan"];
+        // cars.push("Lada");
+        // // console.log(cars);
+
+        // var last = cars.pop();
+        // console.log(last);
+
+        // cars.push("Opel");
+        // console.log(cars.shift());
+        // console.log(cars);
+
+        // cars.unshift("Peugeot");
+        // console.log(cars);
+
+        // var adlar = [];
+        // for(var i = 0; i < 5; i++){
+        //     var userName = prompt("Ad daxil edin: ");
+        //     adlar.push(userName);
+        // }
+
+        // console.log(adlar);
+
+        // var numbers = [];
+        // for(var aftandil = 0; aftandil < 5; aftandil++ ){
+        //     var number = Number(prompt("Reqem daxil edin: "));
+        //     if(number > 0 && number <= 100){
+        //         numbers.push(number);
+        //     }else{
+        //         alert("1 ve 100 arasinda reqem daxil edin.")
+        //     }
+        // }
+        // console.log(numbers);
+
+        // var sum = 0;
+        // for(var i = 0; i < numbers.length; i++){
+        //     sum += numbers[i];
+        // }
+
+        // console.log(sum);
+
+        // console.log(sum / numbers.length);
+
+        // var main = document.getElementById("main");
+        // var reqem = 5;
+        // main.innerHTML = "<a href='https://www.google.com'>Google "+reqem+" </a>";
+
+        // main.addEventListener("mouseup", function(){
+        //     main.style.backgroundColor = "#eee ";
+        // });
+
+        // main.addEventListener("mousedown", function(){
+        //     main.style.backgroundColor = "red ";
+        // });
+
+        // main.onclick = function(){
+        //     main.remove();
+        // };
+
+        var inners = document.getElementsByClassName("inner");
+        console.log(inners);
+
+        for (var i = 0; i < inners.length; i++) {
+            inners[i].innerHTML = "samir";
+            if (i % 2 == 0) {
+                inners[i].style.backgroundColor = "#777";
+            }
+            else {
+                inners[i].style.backgroundColor = "#ebebeb";
+            }
+        }
+
+        document.onkeydown = function (e) {
+            if (e.keyCode == 39) {
+                for (var i = 0; i < inners.length; i++) {
+                    inners[i].style.left = inners[i].offsetLeft + 10 + "px";
+                }
+            }else if(e.keyCode == 37){
+                for (var i = 0; i < inners.length; i++) {
+                    inners[i].style.left = inners[i].offsetLeft - 10 + "px";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
